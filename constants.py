@@ -172,26 +172,42 @@ NODES = {
     CLASSROOMS_ID: CLASSROOMS
 }
 
+TUTORIAL = (f'GUIA{os.linesep}'
+            f'OLÁ, SAIBA COMO USAR O UGU!{os.linesep}{os.linesep}'
+            f'Verifique no Menu quais das informações você deseja saber, após isso basta digitar um único digito da opç'
+            f'ão, por exemplo, apenas o número:{os.linesep}{os.linesep}'
+            f'1{os.linesep}{os.linesep}'
+            f'Com isso o UGU irá te retornar todas as informações para que você possa entender sobre o tema.'
+            f'{os.linesep}'
+            f'Um submenu pode aparecer solicitando que você digite novamente uma opção desejada, assim da mesma forma c'
+            f'omo fez no ínicio, basta digitar um único digito da opção, por exemplo, apenas o número:{os.linesep}'
+            f'{os.linesep}'
+            f'2{os.linesep}{os.linesep}'
+            f'Para sair e finalizar ou solicitar uma nova informação, você deve apenas digitar o número 0.')
+
 LEAFS = {
-    CALENDER_ID: 'LINK PARA CALENDÁRIO ACADÊMICO',
-    EVENTS_ID: 'AQUI ESTÃO OS EVENTOS',
-    TUTORIALS_ID: 'AQUI ESTÃO OS GUIAS E TUTORIAIS',
-    BCC_GRID_ID: 'GRADE DE BCC',
-    BCC_PROFESSORS_ID: 'PROFESSORES DE BCC',
-    BCC_DISCIPLINES_ID: 'DISCIPLINAS DE BCC',
-    BSI_GRID_ID: 'GRADE DE BSI',
-    BSI_PROFESSORS_ID: 'PROFESSORES DE BSI',
-    BSI_DISCIPLINES_ID: 'DISCIPLINAS DE BSI',
-    SERVICES_RU_ID: 'AQUI ESTÃO INFORMAÇÕES DO RESTAURANTE UNIVERSITÁRIO (RU)',
-    SERVICES_INTERCAMPI_ID: 'AQUI ESTÃO INFORMAÇÕES SOBRE O INTERCAMPI',
-    SERVICES_LIBRARY_ID: 'AQUI ESTÃO INFORMAÇÕES SOBRE A BIBLIOTECA DA UFU',
-    SERVICES_HEALTH_ID: 'AQUI ESTÃO INFORMAÇÕES SOBRE SAÚDE NA UFU',
-    LOCATION_BCC_ID: 'LOCALIZAÇÃO DA SECRETÁRIA DE BCC',
-    LOCATION_BSI_ID: 'LOCALIZAÇÃO DA SECRETÁRIA DE BSI',
-    LOCATION_DACOMP_ID: 'LOCALIZAÇÃO DO DIRETÓRIO ACADÊMICO ALAN TURING (DACOMP)',
-    LOCATION_ATLETICA_ID: 'LOCALIZAÇÃO DA ATLÉTICA DA COMPUTAÇÃO',
-    LOCATION_COMPUTARIA_ID: 'LOCALIZAÇÃO DA BATERIA COMPUTARIA',
-    CLASSROOMS_1B_ID: 'LOCALIZAÇÃO DO BLOCO 1B',
-    CLASSROOMS_3Q_ID: 'LOCALIZAÇÃO DO BLOCO 3Q',
-    CLASSROOMS_5R_ID: 'LOCALIZAÇÃO DO BLOCO 5R'
+    CALENDER_ID: 'CALENDÁRIO ACADÊMICO - http://www.prograd.ufu.br/central-de-conteudos/documentos/calendario',
+    EVENTS_ID: 'EVENTOS - https://eventos.ufu.br',
+    TUTORIALS_ID: TUTORIAL,
+    BCC_GRID_ID: 'GRADE DE BCC - https://facom.ufu.br/system/files/conteudo/fluxo_curricular_bcc_-_2023-1_1_0.pdf',
+    BCC_PROFESSORS_ID: 'PROFESSORES DE BCC - https://facom.ufu.br/system/files/conteudo/e-mail_professores_2023-1.pdf',
+    BCC_DISCIPLINES_ID: 'DISCIPLINAS DE BCC - https://facom.ufu.br/graduacao/ciencia-da-computacao-campus-santa-monica/'
+                        'fichas-de-disciplina/curriculo-2023-1',
+    BSI_GRID_ID: 'GRADE DE BSI - https://facom.ufu.br/system/files/conteudo/fluxograma_curricular_do_bacharelado_em_si_'
+                 '0.pdf',
+    BSI_PROFESSORS_ID: 'PROFESSORES DE BSI - https://facom.ufu.br/system/files/conteudo/e-mail_professores_2023-1.pdf',
+    BSI_DISCIPLINES_ID: 'DISCIPLINAS DE BSI - https://facom.ufu.br/graduacao/bsi-santamonica/fichas-de-disciplinas-curr'
+                        'iculo-2022-2',
+    SERVICES_RU_ID: 'RESTAURANTE UNIVERSITÁRIO (RU) - https://maps.app.goo.gl/e1h7jsF9aEeEZ1BK7',
+    SERVICES_INTERCAMPI_ID: 'INTERCAMPI - http://www.proae.ufu.br/intercampi',
+    SERVICES_LIBRARY_ID: 'BIBLIOTECA SANTA MÔNICA - https://maps.app.goo.gl/Rpy4KYNsKhqQhPPA8',
+    SERVICES_HEALTH_ID: 'SAÚDE NA UFU - http://www.proae.ufu.br/disau',
+    LOCATION_BCC_ID: 'COORDENAÇÃO BCC - BLOCO 1A - SALA 228 - https://maps.app.goo.gl/gjmb5gnSaSj5WYT37',
+    LOCATION_BSI_ID: 'COORDENAÇÃO BSI - BLOCO 1A - SALA 230 - https://maps.app.goo.gl/gjmb5gnSaSj5WYT37',
+    LOCATION_DACOMP_ID: 'DACOMP - Bloco 1B - Sala107A https://maps.app.goo.gl/pAyG19Xi1K543iQo6',
+    LOCATION_ATLETICA_ID: 'Atlética Computação Bloco 1B Sala 101 -  https://maps.app.goo.gl/65WcFkjy76tz1tLz5',
+    LOCATION_COMPUTARIA_ID: 'Bateria Computaria - Bloco 1B - Sala 107B https://maps.app.goo.gl/65WcFkjy76tz1tLz5',
+    CLASSROOMS_1B_ID: 'Bloco 1B - https://maps.app.goo.gl/ih9vQTeGRAcEGwYX9',
+    CLASSROOMS_3Q_ID: 'Bloco 3Q - https://maps.app.goo.gl/4n4JB7sKfoqdPDXx7',
+    CLASSROOMS_5R_ID: 'Bloco 5R-A - https://maps.app.goo.gl/W69kgQUS8AFQn3Pd9'
 }
