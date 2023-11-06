@@ -11,10 +11,10 @@ class TelegramBot:
 
     # INI: Fields
 
-    _token: str
-    _url_base: str
-    _timeout: int
-    _dict_chat_ids: dict
+    token: str
+    url_base: str
+    timeout: int
+    dict_chat_ids: dict
 
     # END: Fields
 
@@ -23,94 +23,6 @@ class TelegramBot:
     TOKEN_UNINITIALIZED: int = -1
 
     # END: Constants
-
-    # INI: Properties
-
-    @property
-    def token(self) -> str:
-        """
-        Get para atributo privado: _token.
-
-        :return: Token do chat bot.
-        """
-
-        return self._token
-
-    @token.setter
-    def token(self, token: str):
-        """
-        Set para atributo provado: _token.
-
-        :param token: Valor a se atribuir para _token.
-        """
-
-        self._token = token
-        pass
-
-    @property
-    def url_base(self) -> str:
-        """
-        Get para atributo privado: _url_base.
-
-        :return: URL para API do chat bot.
-        """
-
-        return self._url_base
-
-    @url_base.setter
-    def url_base(self, url_base: str):
-        """
-        Set para atributo provado: _url_base.
-
-        :param url_base: Valor a se atribuir para _url_base.
-        """
-
-        self._url_base = url_base
-        pass
-
-    @property
-    def timeout(self) -> int:
-        """
-        Get para atributo privado: _timeout.
-
-        :return: Timeout para o chat bot.
-        """
-
-        return self._timeout
-
-    @timeout.setter
-    def timeout(self, timeout: int):
-        """
-        Set para atributo provado: _timeout.
-
-        :param timeout: Valor a se atribuir para _timeout.
-        """
-
-        self._timeout = timeout
-        pass
-
-    @property
-    def dict_chat_ids(self) -> dict:
-        """
-        Get para atributo privado: _dict_chat_ids.
-
-        :return: Dicionário de IDs de chats ativos.
-        """
-
-        return self._dict_chat_ids
-
-    @dict_chat_ids.setter
-    def dict_chat_ids(self, dict_chat_ids: dict):
-        """
-        Set para atributo provado: _dict_chat_ids.
-
-        :param dict_chat_ids: Valor a se atribuir para _dict_chat_ids.
-        """
-
-        self._dict_chat_ids = dict_chat_ids
-        pass
-
-    # END: Properties
 
     # INI: Constructor
 
