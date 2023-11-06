@@ -1,6 +1,6 @@
 from TelegramBot import TelegramBot
 
-TOKEN_BOT = '6425005824:AAGqPP4I9K3CWTQ_cMGFiXoxfDSQAVizXIM'
+TOKEN_BOT = ''
 
 
 if __name__ == '__main__':
