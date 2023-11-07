@@ -1,5 +1,4 @@
-# CHATBOT UGU - FACOM UFU
-Chatbot para esclarecer dúvidas dos estudantes da FACOM UFU, principalmente de novatos.
+# CHATBOT UGU - UFU
 
 ## Requisitos para instalação (Ubuntu 22.04 Server)
 Para disponibilização do chatbot será necessário um Ubuntu Server.
@@ -31,23 +30,26 @@ source my_venv/bin/activate
 ```
 
 * Em seguida, é necessário instalar as bibliotecas:
-```
-pip3 install -r requirements.txt
-```
+    * `pip3 install -r requirements.txt`
 
 ## Inserindo o Token do chatbot do Telegram
 * Após gerar o Token do seu chatbot no Telegram, é necessário inserí-lo no código, dentro da pasta do repositório, digite:
 > Nota: Vamos utilizar o nano.
-```
-sudo nano main.py
-```
+    * `sudo nano main.py`
 
 * Dentro do código, adicione o Token dentro das aspas em:
-```
-TOKEN_BOT = ''
-```
+    * `TOKEN_BOT = ''`
 
 * Salve e feche o arquivo.
 
+## Criando PostgreSQL
+* Instale o postgres:
+    * `sudo apt-get install -y postgresql`
+
+* Certifique-se que o serviço está funcionando
+    * `sudo systemctl start postgresql.service`
+
+# TODO
+
 ## Iniciar a execução do chatbot
-Agora, basta executar o arquivo `main.py` e ele já estará respondendo as requisições do Telegram =D.
+Agora, basta executar o arquivo `main.py`, com o seu ambiente virtual ativo, e ele já estará respondendo as requisições do Telegram =D.
