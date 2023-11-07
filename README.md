@@ -7,7 +7,7 @@ Para disponibilização do chatbot será necessário um Ubuntu Server.
     * `sudo apt-get update && sudo apt-get -y upgrade`
 
 * Em seguida instale as dependencias
-    * `sudo apt-get install -y build-essential libssl-dev libffi-dev python3-dev`
+    * `sudo apt-get install -y build-essential libssl-dev libffi-dev python3-dev libpq-dev`
 
 * Do Python3, instale o virtual environment e o pip3:
     * `sudo apt-get install -y python3-pip python3-venv`
