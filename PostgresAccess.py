@@ -8,7 +8,7 @@ class PostgresAccess:
 
     @staticmethod
     def get_connection():
-        engine = create_engine('postgresql://postgres:adminadmin@localhost:5432/postgres')
+        engine = create_engine('your_connstring')
         conn = engine.connect()
         return conn
 
