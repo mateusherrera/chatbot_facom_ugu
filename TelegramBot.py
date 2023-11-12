@@ -1,3 +1,4 @@
+import os
 import json
 import requests
 
@@ -72,7 +73,7 @@ class TelegramBot:
         return menu
 
     @staticmethod
-    def create_leaf_response(node_id: str):
+    def create_leaf_response(node_id: int):
         """
         Esse método gera uma resposta para um leaf.
 
@@ -109,11 +110,17 @@ class TelegramBot:
                     # Tratando transições de menus
                     else:
                         option = message['message']['text']
+
+                        if not option.isnumeric():
+                            self.send_response(INVALID_OPTION, chat_id)
+                            continue
+
                         option_info = MenusInformation.get_next_resposta(self.dict_chat_ids[chat_id], option)
 
                         if option == '0':
                             del self.dict_chat_ids[chat_id]
                             self.send_response(FAREWELL_MESSAGE, chat_id)
+                            continue
 
                         elif option_info.empty:
                             self.send_response(INVALID_OPTION, chat_id)
@@ -133,6 +140,7 @@ class TelegramBot:
                             else:
                                 self.dict_chat_ids[chat_id] = next_step
                                 self.send_response(TelegramBot.create_menu(next_step), chat_id)
+                            continue
         pass
 
     def get_message(self, update_id: int) -> dict:
