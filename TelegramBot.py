@@ -2,6 +2,7 @@ import json
 import requests
 
 from constants import *
+from MenusInformation import MenusInformation
 
 
 class TelegramBot:
@@ -44,7 +45,7 @@ class TelegramBot:
     # INI: Static Methods
 
     @staticmethod
-    def create_menu(node_id: str):
+    def create_menu(node_id: int):
         """
         Esse método estrutura um menu.
 
@@ -53,30 +54,33 @@ class TelegramBot:
         """
 
         # Parte inicial do menu
+        title_menu = MenusInformation.get_menu(node_id)['titulo'][0]
+
         menu = ''
         if node_id == HOME_ID:
             menu = f'{INITIAL_MESSAGE}{os.linesep}{os.linesep}'
-        menu += f'{LINK_TITLES[node_id]}{os.linesep}{os.linesep}'
+        menu += f'{title_menu}{os.linesep}{os.linesep}'
 
         # Opções
-        options = NODES[node_id]
-        for option, description in options.items():
-            menu += f'{option} - {description[0]}.{os.linesep}'
+        options = MenusInformation.get_options(node_id)
+        for option in options.iloc:
+            menu += f'{option["num_opcao"]} - {option["texto_opcao"]}.{os.linesep}'
+        menu += f'0 - SAIR.{os.linesep}'
 
         # Pergunta opção
         menu += f'{os.linesep}Escolha uma opção:'
         return menu
 
     @staticmethod
-    def create_leaf_response(leaf_id: str):
+    def create_leaf_response(node_id: str):
         """
         Esse método gera uma resposta para um leaf.
 
-        :param leaf_id: ID do leaf.
+        :param node_id: ID do leaf.
         :return: String com a resposta.
         """
 
-        return f'{LEAFS[leaf_id]}.'
+        return f'{MenusInformation.get_resposta(node_id)["texto_resposta"][0]}.'
 
     # END: Static Methods
 
@@ -103,28 +107,32 @@ class TelegramBot:
                         self.send_response(TelegramBot.create_menu(self.dict_chat_ids[chat_id]), chat_id)
 
                     # Tratando transições de menus
-                    elif self.dict_chat_ids[chat_id] in NODES.keys():
+                    else:
                         option = message['message']['text']
+                        option_info = MenusInformation.get_next_resposta(self.dict_chat_ids[chat_id], option)
 
-                        if option in NODES[self.dict_chat_ids[chat_id]].keys():
-                            resolve_path = NODES[self.dict_chat_ids[chat_id]][option][1]
+                        if option == '0':
+                            del self.dict_chat_ids[chat_id]
+                            self.send_response(FAREWELL_MESSAGE, chat_id)
 
-                            if resolve_path is None:
-                                del self.dict_chat_ids[chat_id]
-
-                            elif resolve_path in NODES.keys():
-                                self.dict_chat_ids[chat_id] = resolve_path
-                                self.send_response(TelegramBot.create_menu(resolve_path), chat_id)
-
-                            else:
-                                del self.dict_chat_ids[chat_id]
-                                self.send_response(TelegramBot.create_leaf_response(resolve_path), chat_id)
-                                self.send_response(FAREWELL_MESSAGE, chat_id)
-
-                        else:
+                        elif option_info.empty:
                             self.send_response(INVALID_OPTION, chat_id)
                             continue
-                            pass
+
+                        else:
+                            next_step = option_info['id_resposta'][0]
+                            is_leaf = True if option_info['tipo_resposta'][0] == 2 else False
+
+                            # Resposta final
+                            if is_leaf:
+                                del self.dict_chat_ids[chat_id]
+                                self.send_response(TelegramBot.create_leaf_response(next_step), chat_id)
+                                self.send_response(FAREWELL_MESSAGE, chat_id)
+
+                            # Outro menu
+                            else:
+                                self.dict_chat_ids[chat_id] = next_step
+                                self.send_response(TelegramBot.create_menu(next_step), chat_id)
         pass
 
     def get_message(self, update_id: int) -> dict:
