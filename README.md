@@ -78,12 +78,15 @@ ALTER USER postgres WITH PASSWORD 'sua_senha';
   * `su seu_usuario`
 
 
-* TODO: ajustar senha nos scripts
+* Agora em 'PostgresAccess', altere a connstring para `postgresql://postgres:sua_senha@localhost:5432/ugu`
 
 
-* Rode o script python para que o banco seja montado
-> Nota: lembre-se de ativar o ambiente virtual.
-  * `db/create_db.py`
+* Salve e feche o arquivo.
+
+
+* Por último, rode os comando dos arquivos 'create_tables.sql' e 'insert_data.sql' para criar as tabelas e inserir os dados iniciais:
+  * `psql -U postgres -d ugu -a -f create_tables.sql`
+  * `psql -U postgres -d ugu -a -f insert_data.sql`
 
 ## Iniciar a execução do chatbot
 Agora, basta executar o arquivo `main.py`, com o seu ambiente virtual ativo, e ele já estará funcionando =D.
