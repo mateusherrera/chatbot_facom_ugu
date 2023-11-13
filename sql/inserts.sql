@@ -36,41 +36,41 @@ Com isso o UGU irá te retornar todas as informações para que você possa ente
 
 Para sair e finalizar ou solicitar uma nova informação, você deve apenas digitar o número 0.');
 INSERT INTO respostas(texto_resposta)
-	VALUES ('GRADE DE BCC - https://facom.ufu.br/system/files/conteudo/fluxo_curricular_bcc_-_2023-1_1_0.pdf');
+	VALUES ('OK, AQUI VOCÊ PODE ENCONTRAR INFORMAÇÕES SOBRE A GRADE DE BCC: https://facom.ufu.br/system/files/conteudo/fluxo_curricular_bcc_-_2023-1_1_0.pdf');
 INSERT INTO respostas(texto_resposta)
-	VALUES ('PROFESSORES DE BCC - https://facom.ufu.br/system/files/conteudo/e-mail_professores_2023-1.pdf');
+	VALUES ('CERTO, NESSE LINK VOCÊ VAI ECONTRAR OS PROFESSORES DE BCC E SUAS RESPECTIVAS AULAS E EMAILS INSTITUCIONAIS: https://facom.ufu.br/system/files/conteudo/e-mail_professores_2023-1.pdf');
 INSERT INTO respostas(texto_resposta)
-	VALUES ('DISCIPLINAS DE BCC - https://facom.ufu.br/graduacao/ciencia-da-computacao-campus-santa-monica/fichas-de-disciplina/curriculo-2023-1');
+	VALUES ('NESSE LINK, ESTÃO AS INFORMAÇÕES SOBRE AS DISCIPLINAS DE BCC: https://facom.ufu.br/graduacao/ciencia-da-computacao-campus-santa-monica/fichas-de-disciplina/curriculo-2023-1');
 INSERT INTO respostas(texto_resposta)
-	VALUES ('GRADE DE BSI - https://facom.ufu.br/system/files/conteudo/fluxograma_curricular_do_bacharelado_em_si_0.pdf');
+	VALUES ('OK, AQUI VOCÊ PODE ENCONTRAR INFORMAÇÕES SOBRE A GRADE DE BSI: https://facom.ufu.br/system/files/conteudo/fluxograma_curricular_do_bacharelado_em_si_0.pdf');
 INSERT INTO respostas(texto_resposta)
-	VALUES ('PROFESSORES DE BSI - https://facom.ufu.br/system/files/conteudo/e-mail_professores_2023-1.pdf');
+	VALUES ('CERTO, NESSE LINK VOCÊ VAI ECONTRAR OS PROFESSORES DE BSI E SUAS RESPECTIVAS AULAS E EMAILS INSTITUCIONAIS - https://facom.ufu.br/system/files/conteudo/e-mail_professores_2023-1.pdf');
 INSERT INTO respostas(texto_resposta)
-	VALUES ('DISCIPLINAS DE BSI - https://facom.ufu.br/graduacao/bsi-santamonica/fichas-de-disciplinas-curriculo-2022-2');
+	VALUES ('NESSE LINK, ESTÃO AS INFORMAÇÕES SOBRE AS DISCIPLINAS DE BCC: https://facom.ufu.br/graduacao/bsi-santamonica/fichas-de-disciplinas-curriculo-2022-2');
 INSERT INTO respostas(texto_resposta)
-	VALUES ('RESTAURANTE UNIVERSITÁRIO (RU) - https://maps.app.goo.gl/e1h7jsF9aEeEZ1BK7');
+	VALUES ('CLARO, O RESTAURANTE UNIVERSITÁRIO (FAMOSO RU DA UFU) FICA AQUI -> https://maps.app.goo.gl/e1h7jsF9aEeEZ1BK7');
 INSERT INTO respostas(texto_resposta)
-	VALUES ('INTERCAMPI - http://www.proae.ufu.br/intercampi');
+	VALUES ('SOBRE O INTERCAMPI, NESSE LINK DA PROAE ESTÃO AS INFORMAÇÕES QUE VOCÊ PRECISA: http://www.proae.ufu.br/intercampi');
 INSERT INTO respostas(texto_resposta)
-	VALUES ('BIBLIOTECA SANTA MÔNICA - https://maps.app.goo.gl/Rpy4KYNsKhqQhPPA8');
+	VALUES ('CLARO, A BIBLIOTECA DA UFU FICA AQUI -> https://maps.app.goo.gl/Rpy4KYNsKhqQhPPA8');
 INSERT INTO respostas(texto_resposta)
-	VALUES ('SAÚDE NA UFU - http://www.proae.ufu.br/disau');
+	VALUES ('AQUI ESTÁ O LINK DA PROAE QUE FALA SOBRE OS SERVIÇOS DE SAÚDE DA UFU, A DIVISÃO RESPONSÁVEL É A DISAU: http://www.proae.ufu.br/disau');
 INSERT INTO respostas(texto_resposta)
-	VALUES ('COORDENAÇÃO BCC - BLOCO 1A - SALA 228 - https://maps.app.goo.gl/gjmb5gnSaSj5WYT37');
+	VALUES ('A COORDENAÇÃO BCC FICA NO BLOCO 1A NA SALA 228, AQUI ESTÁ NO MAPA -> https://maps.app.goo.gl/gjmb5gnSaSj5WYT37');
 INSERT INTO respostas(texto_resposta)
-	VALUES ('COORDENAÇÃO BSI - BLOCO 1A - SALA 230 - https://maps.app.goo.gl/gjmb5gnSaSj5WYT37');
+	VALUES ('A COORDENAÇÃO BSI FICA NO BLOCO 1A NA SALA 230, AQUI ESTÁ NO MAPA -> https://maps.app.goo.gl/gjmb5gnSaSj5WYT37');
 INSERT INTO respostas(texto_resposta)
-	VALUES ('DACOMP - Bloco 1B - Sala107A https://maps.app.goo.gl/pAyG19Xi1K543iQo6');
+	VALUES ('O DIRETORIO ACADÊMICO DA COMPUTAÇÃO SE CHAMA ALAN TURING, VOCÊ SABIA? ELE FICA NO BLOCO 1B NA Sala107A, AQUI ESTÁ NO MAPA -> https://maps.app.goo.gl/pAyG19Xi1K543iQo6');
 INSERT INTO respostas(texto_resposta)
-	VALUES ('Atlética Computação Bloco 1B Sala 101 -  https://maps.app.goo.gl/65WcFkjy76tz1tLz5');
+	VALUES ('A ATLÉTICA DA COMPUTAÇÃO FICA NO BLOCO 1B NA SALA 101, AQUI ESTÁ NO MAPA ->  https://maps.app.goo.gl/65WcFkjy76tz1tLz5');
 INSERT INTO respostas(texto_resposta)
-	VALUES ('Bateria Computaria - Bloco 1B - Sala 107B https://maps.app.goo.gl/65WcFkjy76tz1tLz5');
+	VALUES ('GOSTA DE SAMBA, VENHA CONHECER A BATERIA COMPUTARIA DA COMPUTAÇÃO, ELA FICA NO BLOCO 1B NA SALA 107B, AQUI ESTÁ NO MAPA -> https://maps.app.goo.gl/65WcFkjy76tz1tLz5');
 INSERT INTO respostas(texto_resposta)
-	VALUES ('Bloco 1B - https://maps.app.goo.gl/ih9vQTeGRAcEGwYX9');
+	VALUES ('O BLOCO 1B FICA AQUI -> https://maps.app.goo.gl/ih9vQTeGRAcEGwYX9');
 INSERT INTO respostas(texto_resposta)
-	VALUES ('Bloco 3Q - https://maps.app.goo.gl/4n4JB7sKfoqdPDXx7');
+	VALUES ('O BLOCO 3Q FICA AQUI -> https://maps.app.goo.gl/4n4JB7sKfoqdPDXx7');
 INSERT INTO respostas(texto_resposta)
-	VALUES ('Bloco 5R-A - https://maps.app.goo.gl/W69kgQUS8AFQn3Pd9');
+	VALUES ('BLOCO 5R-A FICA AQUI -> https://maps.app.goo.gl/W69kgQUS8AFQn3Pd9');
 
 -- OPÇÕES DOS MENUS
 -- TIPOS: 1 - SUBMENU; 2 - LEAF
